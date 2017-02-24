@@ -38,6 +38,7 @@ public class CameraSwitch extends Command {
 
     // Called just before this Command runs the first time
     protected void initialize() {
+    	//Camera should start forward facing.
     	if(Robot.camera.forward == true)
     	{
     		Robot.camera.pointBack();
