@@ -52,7 +52,5 @@ public class AutoDrop extends CommandGroup {
     	addSequential(new kickForward());
     	//addSequential(new kickBack());
     	
-    	
-    	
     } 
 }

@@ -57,7 +57,7 @@ public class Vision extends Command {
     	double target = 200;
     	double center = Robot.centerX;
     	double distanceToObject = target - center;
-        double precision = 20.0;
+        double precision = 15.0;
     	while (Math.abs(distanceToObject) > precision && Math.abs(Robot.oi.getxBoxOne().getX()) < 0.1 && Math.abs(Robot.oi.getxBoxOne().getY()) < 0.1)
     	{
     		center = Robot.centerX;

@@ -44,6 +44,7 @@ public class DriveTrain extends Subsystem {
      public double setPointMiddle = (setPointForward + setPointBack)/2;
      private double speedAuto = 0.65;
      private double backAuto = 0.5;
+     private double turnAuto = 0.4;
      private double speed = 1.0;
    
      public boolean reversed = false;
@@ -89,12 +90,12 @@ public class DriveTrain extends Subsystem {
     
     public void driveLeft()
     {
-    	drive.tankDrive(speedAuto, 0);
+    	drive.tankDrive(-turnAuto, -turnAuto);
     }
     
     public void driveRight()
     {
-    	drive.tankDrive(0, speedAuto);
+    	drive.tankDrive(turnAuto, turnAuto);
     }
     
     public double getDistanceToObject()
