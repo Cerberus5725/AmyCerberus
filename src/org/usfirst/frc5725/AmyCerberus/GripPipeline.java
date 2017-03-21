@@ -1,5 +1,5 @@
-package org.usfirst.frc5725.AmyCerberus;
 
+package org.usfirst.frc5725.AmyCerberus;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -9,13 +9,14 @@ import java.util.Map;
 import java.util.stream.Collectors;
 import java.util.HashMap;
 
+import edu.wpi.first.wpilibj.vision.VisionPipeline;
+
 import org.opencv.core.*;
 import org.opencv.core.Core.*;
 import org.opencv.features2d.FeatureDetector;
 import org.opencv.imgcodecs.Imgcodecs;
 import org.opencv.imgproc.*;
 import org.opencv.objdetect.*;
-import edu.wpi.first.wpilibj.vision.VisionPipeline;
 
 /**
 * GripPipeline class.
@@ -24,7 +25,7 @@ import edu.wpi.first.wpilibj.vision.VisionPipeline;
 *
 * @author GRIP
 */
-public class GripPipeline implements VisionPipeline{
+public class GripPipeline implements VisionPipeline {
 
 	//Outputs
 	private Mat hslThresholdOutput = new Mat();
@@ -38,12 +39,12 @@ public class GripPipeline implements VisionPipeline{
 	/**
 	 * This is the primary method that runs the entire pipeline and updates the outputs.
 	 */
-	public void process(Mat source0) {
+	@Override	public void process(Mat source0) {
 		// Step HSL_Threshold0:
 		Mat hslThresholdInput = source0;
-		double[] hslThresholdHue = {71.22302158273381, 180.0};
-		double[] hslThresholdSaturation = {114.65827338129496, 255.0};
-		double[] hslThresholdLuminance = {107.77877697841726, 255.0};
+		double[] hslThresholdHue = {85.79136690647482, 95.52901023890786};
+		double[] hslThresholdSaturation = {142.17625899280574, 255.0};
+		double[] hslThresholdLuminance = {119.24460431654676, 231.0665529010239};
 		hslThreshold(hslThresholdInput, hslThresholdHue, hslThresholdSaturation, hslThresholdLuminance, hslThresholdOutput);
 
 		// Step Find_Contours0:
@@ -53,7 +54,7 @@ public class GripPipeline implements VisionPipeline{
 
 		// Step Filter_Contours0:
 		ArrayList<MatOfPoint> filterContoursContours = findContoursOutput;
-		double filterContoursMinArea = 0;
+		double filterContoursMinArea = 250.0;
 		double filterContoursMinPerimeter = 0;
 		double filterContoursMinWidth = 0;
 		double filterContoursMaxWidth = 1000;
