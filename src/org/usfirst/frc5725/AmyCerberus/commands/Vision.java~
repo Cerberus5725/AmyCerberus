@@ -54,10 +54,10 @@ public class Vision extends Command {
     	// a network table array.
         //double distanceToObject = (Math.random() * (10 + 10) - 10);
         // How close to target.
-    	double target = 200;
+    	double target = 185;
     	double center = Robot.centerX;
     	double distanceToObject = target - center;
-        double precision = 20.0;
+        double precision = 5.0;
     	while (Math.abs(distanceToObject) > precision && Math.abs(Robot.oi.getxBoxOne().getX()) < 0.1 && Math.abs(Robot.oi.getxBoxOne().getY()) < 0.1)
     	{
     		center = Robot.centerX;
@@ -68,7 +68,7 @@ public class Vision extends Command {
     		if(distanceToObject > 0)
     		{
             	System.out.println();
-            	Timer.delay(1);
+            	Timer.delay(0.5);
     			// TurnLeft
     			Robot.driveTrain.driveLeft();
     			
@@ -76,7 +76,7 @@ public class Vision extends Command {
     		else if(distanceToObject < 0)
     		{
             	System.out.println();
-            	Timer.delay(1);
+            	Timer.delay(0.5);
     			// TurnRight
     			Robot.driveTrain.driveRight();
     		}

@@ -42,10 +42,16 @@ public class DriveTrain extends Subsystem {
      public double setPointForward = 0.14;
      public double setPointBack = 0.46;
      public double setPointMiddle = (setPointForward + setPointBack)/2;
+     public double turnTime = 0.4;
+     public double driveTime = 0.5;
+     
+     
      private double speedAuto = 0.65;
      private double backAuto = 0.5;
-     private double turnAuto = 0.4;
+     private double turnAuto = 0.35;
      private double speed = 1.0;
+     private double timedSpeed = 0.7;
+     
    
      public boolean reversed = false;
 
@@ -98,13 +104,18 @@ public class DriveTrain extends Subsystem {
     	drive.tankDrive(turnAuto, turnAuto);
     }
     
+    //For the timed commands
+    public void driveForwardTimed()
+    {
+    	drive.tankDrive(timedSpeed, -timedSpeed);
+    }
+
+    
     public double getDistanceToObject()
     {
     	//Rangefinder log code
-    	System.out.println("Range Finder: " + String.valueOf(rangeFinder.getAverageVoltage()));
-    	return rangeFinder.getAverageVoltage();
-    
-    	
+    	//System.out.println("Range Finder: " + String.valueOf(rangeFinder.getAverageVoltage()));
+    	return rangeFinder.getAverageVoltage();	
     }
     
     public void stop()
