@@ -46,6 +46,6 @@ public class AutoLeft extends CommandGroup {
     	
     	addSequential(new driveForwardTimed());
     	addSequential(new turnLeftTimed());
-    	//addSequential(new AutoDrop());
+    	addSequential(new SeekAndDriveTo());
     } 
 }

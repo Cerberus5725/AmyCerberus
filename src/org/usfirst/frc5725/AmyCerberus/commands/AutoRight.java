@@ -46,7 +46,7 @@ public class AutoRight extends CommandGroup {
     	
     	addSequential(new driveForwardTimed());
     	addSequential(new turnRightTimed());
-    	//addSequential(new SeekAndDriveTo());
+    	addSequential(new SeekAndDriveSim());
  
     } 
 }
