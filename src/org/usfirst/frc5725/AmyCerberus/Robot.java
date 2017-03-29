@@ -87,7 +87,7 @@ public class Robot extends IterativeRobot {
                 Rect r = Imgproc.boundingRect(pipeline.filterContoursOutput().get(0));
                 synchronized (imgLock) {
                     centerX = r.x + (r.width / 2);
-                    //System.out.println("CenterX: " + String.valueOf(centerX));
+                    System.out.println("CenterX: " + String.valueOf(centerX));
                 }
 
             }

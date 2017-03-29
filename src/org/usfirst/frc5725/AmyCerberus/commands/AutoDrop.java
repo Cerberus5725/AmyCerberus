@@ -50,7 +50,7 @@ public class AutoDrop extends CommandGroup {
     	addSequential(new latchOpen());
     	addSequential(new driveToDistance());
     	addSequential(new kickForward());
-    	//addSequential(new kickBack());
+
     	
     } 
 }
