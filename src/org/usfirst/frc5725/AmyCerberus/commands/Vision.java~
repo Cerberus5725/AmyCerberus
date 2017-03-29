@@ -10,16 +10,16 @@
 
 
 package org.usfirst.frc5725.AmyCerberus.commands;
-import edu.wpi.cscore.UsbCamera;
-import edu.wpi.first.wpilibj.CameraServer;
+//import edu.wpi.cscore.UsbCamera;
+//import edu.wpi.first.wpilibj.CameraServer;
 import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.command.Command;
-import edu.wpi.first.wpilibj.networktables.NetworkTable;
-import edu.wpi.first.wpilibj.vision.VisionThread;
+//import edu.wpi.first.wpilibj.networktables.NetworkTable;
+//import edu.wpi.first.wpilibj.vision.VisionThread;
 
-import org.opencv.core.Rect;
-import org.opencv.imgproc.Imgproc;
-import org.usfirst.frc5725.AmyCerberus.GripPipeline;
+//import org.opencv.core.Rect;
+//import org.opencv.imgproc.Imgproc;
+//import org.usfirst.frc5725.AmyCerberus.GripPipeline;
 import org.usfirst.frc5725.AmyCerberus.Robot;
 
 /**
@@ -55,15 +55,15 @@ public class Vision extends Command {
     	// a network table array.
         //double distanceToObject = (Math.random() * (10 + 10) - 10);
         // How close to target.
-    	double center = Robot.centerX;
+    	double center = Robot.camera.getCenterX();
     	double distanceToTarget = target - center;   
     	while (Math.abs(distanceToTarget) > precision && Math.abs(Robot.oi.getxBoxOne().getX()) < 0.1 && Math.abs(Robot.oi.getxBoxOne().getY()) < 0.1)
     	{
-    		center = Robot.centerX;
+    		center = Robot.camera.getCenterX();
     		distanceToTarget = target - center;
     		// Logs
     		System.out.println("Set Target: " + String.valueOf(target));
-    		System.out.println("Center of Object: " + String.valueOf(Robot.centerX));
+    		System.out.println("Center of Object: " + String.valueOf(center));
     		System.out.println("Distance to Target: " + String.valueOf(distanceToTarget));
 			// Turn based on the value from above.  Eventually distanceToObject 
 			//Will come from vision tracking

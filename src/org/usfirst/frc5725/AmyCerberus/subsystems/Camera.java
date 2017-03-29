@@ -1,7 +1,8 @@
-package org.usfirst.frc5725.AmyCerberus;
+package org.usfirst.frc5725.AmyCerberus.subsystems;
 
 import org.opencv.core.Rect;
 import org.opencv.imgproc.Imgproc;
+import org.usfirst.frc5725.AmyCerberus.GripPipeline;
 
 import edu.wpi.cscore.UsbCamera;
 import edu.wpi.first.wpilibj.CameraServer;
