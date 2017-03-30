@@ -10,7 +10,7 @@ import edu.wpi.first.wpilibj.vision.VisionThread;
 //import edu.wpi.first.wpilibj.vision.VisionPipeline;
 
 public class Camera {
-    // Vison tracking variables
+    // Vision tracking variables
 	private VisionThread visionThread;
 	private double centerX = 0.0;
 	private final Object imgLock = new Object();

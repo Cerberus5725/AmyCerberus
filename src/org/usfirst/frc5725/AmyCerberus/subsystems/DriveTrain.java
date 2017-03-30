@@ -61,7 +61,8 @@ public class DriveTrain extends Subsystem {
      private double backAuto = 0.5;
      private double speed = 1.0;
      private double timedSpeed = 0.7;
-     
+     private double slowVeer = 0.3;
+     private double fastVeer = 0.6;
      
    
      
@@ -117,6 +118,16 @@ public class DriveTrain extends Subsystem {
     public void driveRight()
     {
     	drive.tankDrive(turnAuto, turnAuto);
+    }
+    
+    public void veerLeft()
+    {
+    	drive.tankDrive(slowVeer, -fastVeer);
+    }
+    
+    public void veerRight()
+    {
+    	drive.tankDrive(fastVeer, -slowVeer);
     }
     
     //For the timed commands
