@@ -46,9 +46,9 @@ public class AutoMiddle extends CommandGroup {
       	 /* "SeekAndDriveTo" or "SeekAndDriveSim" 
        	 * comment one or other out below.
        	 */
-    	//addSequential(new latchOpen());
-    	addSequential(new SeekAndDriveTo());
-    	//addSequential(new SeekAndDriveSim());
-    	//addSequential(new kickForward());
+    	addSequential(new latchOpen());
+    	//addSequential(new SeekAndDriveTo());
+    	addSequential(new SeekAndDriveSim());
+    	addSequential(new kickForward());
     } 
 }
