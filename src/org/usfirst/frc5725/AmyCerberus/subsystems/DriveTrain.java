@@ -42,11 +42,11 @@ public class DriveTrain extends Subsystem {
      public double setPointForward = 0.2;
      public double setPointBack = 0.46;
      public double setPointMiddle = (setPointForward + setPointBack)/2;
-     public double turnTime = 0.9;
+     public double turnTime = 2.2;
      public double driveTime = 0.7;
      // Vision tracking variables
      // Variables likely with the most success to date(190,10,0.5,0.32)
- 	 public double target = 180;
+ 	 public double target = 160;
  	 public double precision = 10.0;
  	 public double delayTime = 0.5;
  	 private double turnAuto = 0.32;
@@ -61,8 +61,8 @@ public class DriveTrain extends Subsystem {
      private double backAuto = 0.5;
      private double speed = 1.0;
      private double timedSpeed = 0.7;
-     private double slowVeer = 0.3;
-     private double fastVeer = 0.6;
+     private double slowVeer = 0.4;
+     private double fastVeer = 0.5;
      
    
      
@@ -140,7 +140,7 @@ public class DriveTrain extends Subsystem {
     public double getDistanceToObject()
     {
     	//Rangefinder log code
-    	//System.out.println("Range Finder: " + String.valueOf(rangeFinder.getAverageVoltage()));
+    	System.out.println("Range Finder: " + String.valueOf(rangeFinder.getAverageVoltage()));
     	return rangeFinder.getAverageVoltage();	
     }
     

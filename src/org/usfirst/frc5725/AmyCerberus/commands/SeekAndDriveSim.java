@@ -62,15 +62,15 @@ public class SeekAndDriveSim extends Command {
         		if(distanceToTarget > 0)
         		{
         			// TurnLeft
-        			Robot.driveTrain.driveLeft();
-        			//Robot.driveTrain.veerLeft();
+        			//Robot.driveTrain.driveLeft();
+        			Robot.driveTrain.veerLeft();
         			
         		}
         		else if(distanceToTarget < 0)
         		{
         			// TurnRight
-        			Robot.driveTrain.driveRight();
-        			//Robot.driveTrain.veerRight();
+        			//Robot.driveTrain.driveRight();
+        			Robot.driveTrain.veerRight();
         		}
     		}	
     		else

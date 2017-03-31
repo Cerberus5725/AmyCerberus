@@ -65,8 +65,7 @@ public class RobotMap {
         driveTrainDrive.setSensitivity(0.5);
         driveTrainDrive.setMaxOutput(1.0);
         driveTrainDrive.setInvertedMotor(RobotDrive.MotorType.kFrontLeft, true);
-        driveTrainDrive.setInvertedMotor(RobotDrive.MotorType.kRearLeft, true);
-        driveTrainRangeFinder = new AnalogInput(1);
+        driveTrainRangeFinder = new AnalogInput(2);
         LiveWindow.addSensor("DriveTrain", "RangeFinder", driveTrainRangeFinder);
         
         hDrivehDrive = new VictorSP(4);

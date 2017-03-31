@@ -1,4 +1,3 @@
-
 package org.usfirst.frc5725.AmyCerberus;
 import java.io.File;
 import java.io.FileWriter;
@@ -42,9 +41,9 @@ public class GripPipeline implements VisionPipeline {
 	@Override	public void process(Mat source0) {
 		// Step HSL_Threshold0:
 		Mat hslThresholdInput = source0;
-		double[] hslThresholdHue = {85.79136690647482, 95.52901023890786};
-		double[] hslThresholdSaturation = {142.17625899280574, 255.0};
-		double[] hslThresholdLuminance = {119.24460431654676, 231.0665529010239};
+		double[] hslThresholdHue = {77.6978417266187, 90.92150170648463};
+		double[] hslThresholdSaturation = {231.60971223021582, 255.0};
+		double[] hslThresholdLuminance = {116.95143884892086, 226.71501706484642};
 		hslThreshold(hslThresholdInput, hslThresholdHue, hslThresholdSaturation, hslThresholdLuminance, hslThresholdOutput);
 
 		// Step Find_Contours0:
@@ -54,7 +53,7 @@ public class GripPipeline implements VisionPipeline {
 
 		// Step Filter_Contours0:
 		ArrayList<MatOfPoint> filterContoursContours = findContoursOutput;
-		double filterContoursMinArea = 250.0;
+		double filterContoursMinArea = 50.0;
 		double filterContoursMinPerimeter = 0;
 		double filterContoursMinWidth = 0;
 		double filterContoursMaxWidth = 1000;
