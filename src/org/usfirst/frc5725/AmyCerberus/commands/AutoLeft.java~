@@ -50,9 +50,9 @@ public class AutoLeft extends CommandGroup {
     	addSequential(new driveForwardTimed());
     	addSequential(new turnLeftTimed());
     	addSequential(new driveForwardTimed(),0.5);
-    	//addSequential(new latchOpen());
+    	addSequential(new latchOpen());
     	addSequential(new SeekAndDriveSim());
     	//addSequential(new SeekAndDriveTo());
-    	//addSequential(new kickForward());
+    	addSequential(new kickForward());
     } 
 }
