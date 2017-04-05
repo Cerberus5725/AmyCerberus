@@ -55,7 +55,9 @@ public class AutoLeft extends CommandGroup {
     	addSequential(new SeekAndDriveSim());
     	//addSequential(new SeekAndDriveTo());
     	addSequential(new kickForward());
-    	Timer.delay(2.0);
+    	// Backup commands after one second delay.
+    	Timer.delay(1.0);
     	addSequential(new AutoReverse());
+    	addSequential(new SwitchDirection());
     } 
 }
