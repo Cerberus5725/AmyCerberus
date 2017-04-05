@@ -13,6 +13,7 @@ package org.usfirst.frc5725.AmyCerberus.commands;
 
 import edu.wpi.first.wpilibj.command.CommandGroup;
 import org.usfirst.frc5725.AmyCerberus.subsystems.*;
+import edu.wpi.first.wpilibj.Timer;
 
 /**
  *
@@ -54,5 +55,7 @@ public class AutoLeft extends CommandGroup {
     	addSequential(new SeekAndDriveSim());
     	//addSequential(new SeekAndDriveTo());
     	addSequential(new kickForward());
+    	Timer.delay(2.0);
+    	addSequential(new AutoReverse());
     } 
 }

@@ -13,6 +13,7 @@ package org.usfirst.frc5725.AmyCerberus.commands;
 
 import edu.wpi.first.wpilibj.command.CommandGroup;
 import org.usfirst.frc5725.AmyCerberus.subsystems.*;
+import edu.wpi.first.wpilibj.Timer;
 
 /**
  *
@@ -50,5 +51,7 @@ public class AutoMiddle extends CommandGroup {
     	//addSequential(new SeekAndDriveTo());
     	addSequential(new SeekAndDriveSim());
     	addSequential(new kickForward());
+    	Timer.delay(2.0);
+    	addSequential(new AutoReverse());
     } 
 }
