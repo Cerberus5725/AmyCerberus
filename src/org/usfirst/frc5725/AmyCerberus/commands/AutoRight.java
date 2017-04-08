@@ -55,9 +55,9 @@ public class AutoRight extends CommandGroup {
     	//addSequential(new SeekAndDriveTo());
     	addSequential(new kickForward());
     	// Backup commands after one second delay.
-    	Timer.delay(1.0);
-    	addSequential(new AutoReverse());
-    	addSequential(new SwitchDirection());
+    	//Timer.delay(2.0);
+    	//addSequential(new AutoReverse());
+    	//addSequential(new SwitchDirection());
  
     } 
 }

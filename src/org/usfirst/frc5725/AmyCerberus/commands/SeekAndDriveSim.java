@@ -55,6 +55,7 @@ public class SeekAndDriveSim extends Command {
     			System.out.println("Set Target: " + String.valueOf(target));
         		System.out.println("Center of Object: " + String.valueOf(center));
         		System.out.println("Distance to Target: " + String.valueOf(distanceToTarget));
+        		System.out.println("Range Finder: " + String.valueOf(Robot.driveTrain.getDistanceToObject()));
     			// Turn based on the value from above.  Eventually distanceToObject 
     			//Will come from vision tracking
         		//Delays the look

@@ -55,11 +55,11 @@ public class Latch extends Subsystem {
     
     public void latchOpen()
     {
-    	drive.set(speed);
+    	drive.set(-speed);
     }
     public void latchClose()
     {
-    	drive.set(-speed);
+    	drive.set(speed);
     }
     public void stop()
     {
