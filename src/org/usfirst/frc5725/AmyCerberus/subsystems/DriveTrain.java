@@ -53,7 +53,7 @@ public class DriveTrain extends Subsystem {
  	 private double turnAuto = 0.35;
  	 /* Separate Simultaneous turn and drive variables due to the need to go
  	 slower to read vision from the camera  */
- 	 public double setPointForwardSim = 0.203;
+ 	 public double setPointForwardSim = 0.195;
  	 private double simAuto = 0.55;
  	 
  	 public boolean reversed = false;
