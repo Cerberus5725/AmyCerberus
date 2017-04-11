@@ -50,14 +50,14 @@ public class AutoLeft extends CommandGroup {
     	 */
     	addSequential(new driveForwardTimed());
     	addSequential(new turnLeftTimed());
-    	addSequential(new driveForwardTimed(),0.5);
+    	addSequential(new driveForwardTimed(),0.7);
     	addSequential(new latchOpen());
     	addSequential(new SeekAndDriveSim());
     	//addSequential(new SeekAndDriveTo());
     	addSequential(new kickForward());
     	// Backup commands after one second delay.
-    	Timer.delay(1.0);
-    	addSequential(new AutoReverse());
-    	addSequential(new SwitchDirection());
+    	//Timer.delay(2);
+    	//addSequential(new AutoReverse());
+    	//addSequential(new SwitchDirection());
     } 
 }
