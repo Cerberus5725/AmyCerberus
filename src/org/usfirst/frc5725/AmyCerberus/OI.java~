@@ -77,7 +77,7 @@ public class OI {
         autoLeft.whenPressed(new AutoLeft());
         vision = new JoystickButton(xBoxOne, 7);
         vision.whenPressed(new SeekAndDriveTo());
-        cameraSwitch = new JoystickButton(xBoxOne, 4);
+        cameraSwitch = new JoystickButton(xBoxOne, 2);
         cameraSwitch.whenPressed(new CameraSwitch());
         latchCloseManual = new JoystickButton(xBoxOne, 6);
         latchCloseManual.whileHeld(new latchCloseManual());
@@ -89,7 +89,7 @@ public class OI {
         follow.whenPressed(new follow());
         driveBackToDistance = new JoystickButton(xBoxOne, 1);
         driveBackToDistance.whenPressed(new AutoReverse());
-        driveToDistance = new JoystickButton(xBoxOne, 2);
+        driveToDistance = new JoystickButton(xBoxOne, 4);
         driveToDistance.whenPressed(new AutoDrop());
 
 

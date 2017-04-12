@@ -58,7 +58,7 @@ public class RobotMap {
         LiveWindow.addActuator("DriveTrain", "RightBack", (VictorSP) driveTrainRightBack);
         
         driveTrainDrive = new RobotDrive(driveTrainLeftFront, driveTrainLeftBack,
-              driveTrainRightFront, driveTrainRightBack);
+        driveTrainRightFront, driveTrainRightBack);
         
         driveTrainDrive.setSafetyEnabled(true);
         driveTrainDrive.setExpiration(0.1);
@@ -66,6 +66,7 @@ public class RobotMap {
         driveTrainDrive.setMaxOutput(1.0);
         driveTrainDrive.setInvertedMotor(RobotDrive.MotorType.kFrontLeft, true);
         driveTrainDrive.setInvertedMotor(RobotDrive.MotorType.kRearLeft, true);
+       
         driveTrainRangeFinder = new AnalogInput(2);
         LiveWindow.addSensor("DriveTrain", "RangeFinder", driveTrainRangeFinder);
         
@@ -77,7 +78,7 @@ public class RobotMap {
         
         latchDrive = new VictorSP(9);
         LiveWindow.addActuator("Latch", "Drive", (VictorSP) latchDrive);
-        
+        //driveTrainDrive.setInvertedMotor(latchDrive, true);
         kickerKicker = new Servo(0);
         LiveWindow.addActuator("Kicker", "Kicker", kickerKicker);
         
