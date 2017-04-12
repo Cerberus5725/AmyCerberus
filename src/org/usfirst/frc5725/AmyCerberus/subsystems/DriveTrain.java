@@ -43,28 +43,17 @@ public class DriveTrain extends Subsystem {
      public double setPointBack = 0.3;
      public double setPointMiddle = (setPointForward + setPointBack)/2;
      public double turnTime = 2.7;
-<<<<<<< HEAD
-     public double driveTime = 1.6;
-=======
+
      public double driveTime = 1.8;
->>>>>>> dba0dc69ecc2a0aaada90ea18793e15037f12ac8
      // Vision tracking variables
      // Variables likely with the most success to date(190,10,0.5,0.32)
  	 public double target = 160;
  	 public double precision = 10.0;
  	 public double delayTime = 0.7;
-<<<<<<< HEAD
  	 private double turnAuto = 0.35;
  	 /* Separate Simultaneous turn and drive variables due to the need to go
  	 slower to read vision from the camera  */
  	 public double setPointForwardSim = 0.196;
-=======
- 	 public double stopTime = 2.0;
- 	 private double turnAuto = 0.35;
- 	 /* Separate Simultaneous turn and drive variables due to the need to go
- 	 slower to read vision from the camera  */
- 	 public double setPointForwardSim = 0.195;
->>>>>>> dba0dc69ecc2a0aaada90ea18793e15037f12ac8
  	 private double simAuto = 0.55;
  	 
  	 public boolean reversed = false;
